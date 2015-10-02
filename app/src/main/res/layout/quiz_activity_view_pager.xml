@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:descendantFocusability="beforeDescendants">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_category"
+            android:id="@+id/text_category"
+            android:textSize="@dimen/text_size"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/category"
+            android:spinnerMode="dialog"
+            android:dropDownWidth="wrap_content"
+            android:layout_toRightOf="@+id/text_category"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:scrollIndicators="left|right" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_question_number"
+            android:background="#00000000"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:editable="true"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="1"
+            android:numeric="decimal"
+            android:textSize="20sp"
+            android:inputType="phone"
+            android:selectAllOnFocus="true"
+            android:clickable="true"
+            android:digits="0123456789"
+            android:enabled="true"
+            android:singleLine="true"
+            android:layout_alignParentEnd="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textStyle="bold" />
+        </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/qPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background ="#ddd"
+        android:layout_weight="1" />
+
+</LinearLayout>
