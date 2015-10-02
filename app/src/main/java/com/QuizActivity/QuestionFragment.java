@@ -3,7 +3,6 @@ package com.QuizActivity;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -43,7 +42,6 @@ public class QuestionFragment extends Fragment {
         for (int i = 0; i < answersContainer.getChildCount(); i++) {
             RelativeLayout checkboxContainer = (RelativeLayout)answersContainer.getChildAt(i);
             CheckBox cb = (CheckBox)checkboxContainer.getChildAt(0);
-            Boolean current = currentQuestion.isChecked(i);
             cb.setMovementMethod(new ScrollingMovementMethod());
             cb.setText(answers[i]);
             if(MyServerData.getInstance().getTestState() == "finished"){
