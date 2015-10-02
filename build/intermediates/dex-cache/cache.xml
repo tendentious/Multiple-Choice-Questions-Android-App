@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\IT-Electronics\Visual Studio\Android SDK\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-ef2f3e636a1017ed683b0eefdeb47e4d7d46c535.jar" />
+    </item>
+    <item
+        jar="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\pre-dexed\debug\classes-d19057d8ea686db4c5843d8a2d1e3cfebd5bcac3.jar" />
+    </item>
+    <item
+        jar="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\libs\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\pre-dexed\debug\gson-2.3.1-e6ec5ba04e2e7ec990c3dfe7fb5ebf1e2546c337.jar" />
+    </item>
+    <item
+        jar="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\pre-dexed\debug\classes-be5d637bbeea1b453acdfb304b2cf91128ad5a53.jar" />
+    </item>
+    <item
+        jar="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\IT-Electronics\Android_Projects\MultipleChoiceQuestions\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-e6968b59e4f08d50ca194b0914fdb079b5d02c83.jar" />
+    </item>
+
+</items>

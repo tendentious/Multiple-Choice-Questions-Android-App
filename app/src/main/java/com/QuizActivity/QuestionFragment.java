@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,9 @@ public class QuestionFragment extends Fragment {
         final Question currentQuestion = MyServerData.getInstance().getQuestion(currentPageNr);
         View rootView = lInflater.inflate(R.layout.quiz_activity_fragment,container,false);
         //initialize questionText
-        ((TextView) rootView.findViewById(R.id.questionText)).setText(currentQuestion.getQuestionText());
+        TextView question = (TextView) rootView.findViewById(R.id.questionText);
+        question.setMovementMethod(new ScrollingMovementMethod());
+        question.setText(currentQuestion.getQuestionText());
 
         //initialize answers
         answersContainer = (LinearLayout)rootView.findViewById(R.id.answers_container);
@@ -41,7 +44,7 @@ public class QuestionFragment extends Fragment {
             RelativeLayout checkboxContainer = (RelativeLayout)answersContainer.getChildAt(i);
             CheckBox cb = (CheckBox)checkboxContainer.getChildAt(0);
             Boolean current = currentQuestion.isChecked(i);
-            cb.setChecked(current);
+            cb.setMovementMethod(new ScrollingMovementMethod());
             cb.setText(answers[i]);
             if(MyServerData.getInstance().getTestState() == "finished"){
                 cb.setEnabled(false);
