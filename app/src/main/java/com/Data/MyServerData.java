@@ -21,7 +21,7 @@ public class MyServerData {
     protected MyServerData() {
         //initialize questions from server, shared preferences, files etc.
         //questions are hardcoded here for testing
-        Question[] FirstCategory  = new Question[4];;
+        Question[] FirstCategory  = new Question[3];;
         Question[] SecondCategory = new Question[3];;
         String q = "What is the capital of France ?";
         String[] a = new String[3];
@@ -53,22 +53,6 @@ public class MyServerData {
         r[2] = true;
         question = new Question(q,a,r);
         FirstCategory[2] = question;
-        q = "This is a test question . Only the first answer is correct. " +
-                "DummyTextDummyText DummyTextDummyText DummyTextDummyText" +
-                " DummyTextDummyText DummyTextDummyText DummyTextDummyText " +
-                "DummyText DummyText DummyText DummyText DummyText DummyText DummyText?";
-        a[0] = "1234567890 asdfghjkl qwertyuiopăî zxcvbnm,,țqweqwesadzxcgretwreqda  sdawqe  eqweq qwe qweqwe wqeq";
-        a[1] = "AAAAAAAAAAAAAAAAAAAAAAAA SSSSSSSSSSSSSSSSSSSSSSS DDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFF" +
-                " GGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHE WWWWWWWWWWWWWWWWW AAAAAAAAAAAAAA SSSSSSSSSSSSSSSS";
-        a[2] = "DummyAnswer DummyAnswerDummyAnswer DummyAnswer DummyAnswer" +
-                " DummyAnswer DummyAnswerDummyAnswer DummyAnswer DummyAnswerDummyAnswer DummyAnswer" +
-                " DummyAnswer DummyAnswerDummyAnswer DummyAnswer DummyAnswerDummyAnswer DummyAnswer" +
-                " DummyAnswer DummyAnswerDummyAnswer DummyAnswer DummyAnswerDummyAnswer DummyAnswer";
-        r[0] = true;
-        r[1] = false;
-        r[2] = false;
-        question = new Question(q,a,r);
-        FirstCategory[3] = question;
         q = "Which of the following is flying ?";
         a[0] = "Bird";
         a[1] = "Lion";

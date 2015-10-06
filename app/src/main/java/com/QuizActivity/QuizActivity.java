@@ -194,7 +194,8 @@ public class QuizActivity extends AppCompatActivity {
                         showResults();
                     }
                 });
-            }
+            }else{showResults();}
+
         }else{
             showResults();
         }
