@@ -46,11 +46,11 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_activity_view_pager);
 
-        allCategories = new ArrayList<String>(MyServerData.getInstance().getCategoryList());
+        allCategories = new ArrayList<>(MyServerData.getInstance().getCategoryList());
         totalQuestions = MyServerData.getInstance().getTotalQuestions();
 
         //initialize category spinner
-        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,allCategories);
+        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,allCategories);
         spinCategory = (Spinner) findViewById(R.id.category);
         spinCategory.setAdapter(categoryAdapter);
         spinCategory.setSelection(0);
@@ -61,7 +61,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String currentQuestionRealCategory = MyServerData.getInstance().getQuestionCategory(pager.getCurrentItem());
                 String selectedCategory = spinCategory.getItemAtPosition(position).toString();
-                if (selectedCategory != currentQuestionRealCategory) {
+                if (!selectedCategory.equals(currentQuestionRealCategory)) {
                     int firstQuestionNumberFromCategory = MyServerData.getInstance().getFirstQuestionNumberFromCategory(selectedCategory);
                     ViewPager pager = (ViewPager) findViewById(R.id.qPager);
                     pager.setCurrentItem(firstQuestionNumberFromCategory, false);
@@ -93,7 +93,7 @@ public class QuizActivity extends AppCompatActivity {
                         if (questionNumber < 0) {
                             questionNumber = 1;
                         }
-                        //create loopting effet
+                        //create looping effect
                         if (questionNumber == totalQuestions + 1) {
                             questionNumber = 1;
                             ((EditText)v).setText("1");
@@ -155,7 +155,7 @@ public class QuizActivity extends AppCompatActivity {
     public void FinishTest(View v){
 
         //check if there are unanswered questions
-        if(MyServerData.getInstance().getTestState() == "inProgress"){
+        if(MyServerData.getInstance().getTestState().equals("inProgress")){
             ArrayList<String> UnansweredQuestions = new ArrayList<>();
             LinkedHashMap<String,Object> allQuestions = MyServerData.getInstance().getAllQuestions();
             for(Map.Entry category: allQuestions.entrySet()){
@@ -205,8 +205,8 @@ public class QuizActivity extends AppCompatActivity {
 
     public void showResults(){
         int animationDuration;
-        if(MyServerData.getInstance().getTestState() == "finished"){
-            animationDuration = 100;
+        if(MyServerData.getInstance().getTestState().equals("finished")){
+            animationDuration = 10;
         }else{
             animationDuration = 2000;
         }

@@ -44,9 +44,9 @@ public class QuestionFragment extends Fragment {
             CheckBox cb = (CheckBox)checkboxContainer.getChildAt(0);
             cb.setMovementMethod(new ScrollingMovementMethod());
             cb.setText(answers[i]);
-            if(MyServerData.getInstance().getTestState() == "finished"){
+            cb.setChecked(currentQuestion.isChecked(i));
+            if(MyServerData.getInstance().getTestState().equals("finished") ){
                 cb.setEnabled(false);
-
                 //check if answer is right or wrong
                 if(currentQuestion.isCorrectAnswer(i)){
                     cb.setTextColor(Color.parseColor("#4DAD47"));
