@@ -135,6 +135,8 @@ public class QuizActivity extends AppCompatActivity {
                 if(currentQuestion > totalQuestions){currentQuestion = 1;}
                 questionNr.setText(currentQuestion.toString());
                 questionNr.clearFocus();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(questionNr.getWindowToken(), 0);
             }
             @Override
             public void onPageScrollStateChanged(int state) {
