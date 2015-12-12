@@ -171,9 +171,10 @@ public class MyServerData {
     public int getFirstQuestionNumberFromCategory(String category){
         Iterator<Map.Entry<String,Object>> it = myCategories.entrySet().iterator();
         int questionNumber = 1;
-        while(it.hasNext()){
-            if(it.next().getKey() != category){
-                questionNumber += ((Question[])it.next().getValue()).length;
+        while(it.hasNext()){ 
+            Map.Entry next = it.next();
+            if(!next.getKey().equals(category)){
+                questionNumber += ((Question[])next.getValue()).length;
             }else{
                 break;
             }
